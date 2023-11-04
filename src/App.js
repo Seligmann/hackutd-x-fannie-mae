@@ -1,37 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-import * as Realm from "realm-web";
-import {useState} from "react";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
-const app = new Realm.App({ id: "application-1-wduao" });
+const firebaseConfig = {
+    apiKey: "AIzaSyBl_iuClcP2JLNYlMsim_M9GkUp3Ob6moo",
+    authDomain: "hackutd-dda6a.firebaseapp.com",
+    projectId: "hackutd-dda6a",
+    storageBucket: "hackutd-dda6a.appspot.com",
+    messagingSenderId: "393903911592",
+    appId: "1:393903911592:web:771764b972033631a1c89d"
+};
 
-// Create a component that displays the given user's details
-function UserDetail({ user }) {
-  return (
-      <div>
-        <h1>Logged in with anonymous id: {user.id}</h1>
-      </div>
-  );
-}
-// Create a component that lets an anonymous user log in
-function Login({ setUser }) {
-  const loginAnonymous = async () => {
-    const user = await app.logIn(Realm.Credentials.anonymous());
-    setUser(user);
-  };
-  return <button onClick={loginAnonymous}>Log In</button>;
-}
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 const App = () => {
-  // Keep the logged in Realm user in local state. This lets the app re-render
-  // whenever the current user changes (e.g. logs in or logs out).
-  const [user, setUser] = useState(app.currentUser);
-  // If a user is logged in, show their details.
-  // Otherwise, show the login screen.
   return (
       <div className="App">
         <div className="App-header">
-          {user ? <UserDetail user={user} /> : <Login setUser={setUser} />}
+            yo
         </div>
       </div>
   );
