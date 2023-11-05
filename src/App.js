@@ -12,14 +12,14 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+// const db = firebase.firestore();
 
 const App = () => {
     return (
         <div className="App">
             <div className="App-header">
                 <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32"><h1
-                    className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center text-white">Analyze
+                    className="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center text-white">Analyze
                     your home-buying potential with just a few minutes</h1><p
                     className="mt-6 text-lg text-center max-w-3xl mx-auto text-white">View home-buying statistics across
                     the United States, or enter and edit your current finances to see your home buying potential.</p>
