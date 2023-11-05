@@ -18,7 +18,9 @@ const App = () => {
   return (
       <div className="App">
         <div className="App-header">
-            yo
+            <h1 className="text-4xl font-bold underline">
+                Hey Bozo! Can U Afford A House??
+            </h1>
         </div>
       </div>
   );
